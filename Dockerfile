@@ -13,4 +13,6 @@ FROM openjdk:17-oracle
 WORKDIR /app
 COPY --from=builder /app/target/patient-0.0.1.jar .
 EXPOSE 8080
+ENV MYSQL_PATIENT_USER=$MYSQL_PATIENT_USER
+ENV PROD_PASSWORD=$PROD_PASSWORD
 CMD ["java", "-jar", "patient-0.0.1.jar"]

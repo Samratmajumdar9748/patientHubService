@@ -31,8 +31,8 @@ spring:
       on-profile: prod
   datasource:
     url: jdbc:mysql://mysql-db:3306/patient
-    username: ${MYSQL_PATIENT_USER}
-    password: ${PROD_PASSWORD}
+    username: ${MYSQL_PATIENT_USER:root}
+    password: ${PROD_PASSWORD:password}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     properties:
