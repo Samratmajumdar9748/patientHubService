@@ -1,7 +1,6 @@
 #local and share configuration
 server:
   port: 8080
-
 spring:
   profiles:
     active: default
@@ -23,7 +22,6 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect
-
 ---
 spring:
   config:
